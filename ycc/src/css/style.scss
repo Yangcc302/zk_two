@@ -79,14 +79,168 @@ body {
 header {
     width: 100%;
     height: .4rem;
+    display: flex;
+    position: relative;
+    img {
+        width: 100%;
+        height: .4rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    span {
+        z-index: 999;
+        color: #fff;
+        @extend %qjz;
+        margin-left: 40%;
+        font-size: .18rem;
+    }
 }
 
 section {
     flex: 1;
     overflow-y: scroll;
+    background: #7E0505;
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left: 5%;
+        dl {
+            flex: 30%;
+            background: #fff;
+            flex-direction: column;
+            height: auto;
+            margin: .02rem .01rem;
+            border-radius: .05rem;
+            dt {
+                width: 100%;
+                padding: .1rem 0;
+                @extend %qjz;
+                img {
+                    width: 50%;
+                }
+            }
+            dd {
+                width: 100%;
+                padding: .1rem 0;
+                span {
+                    @extend %qjz;
+                }
+            }
+        }
+    }
+    .box {
+        display: flex;
+        @extend %qjz;
+        span {
+            padding: .15rem 0;
+            color: #fff;
+            font-size: .18rem;
+        }
+    }
+    .nav {
+        display: flex;
+        width: 90%;
+        margin-left: 5%;
+        dl {
+            display: flex;
+            width: 49.5%;
+            background: #fff;
+            margin-right: 0.5%;
+            dt {
+                width: 40%;
+                height: auto;
+                padding: .1rem 0;
+                @extend %qjz;
+                img {
+                    width: 90%;
+                }
+            }
+            dd {
+                width: 60%;
+                padding: .1rem 0;
+                p {
+                    &:nth-child(1) {
+                        font-size: .1rem;
+                    }
+                    &:nth-child(2) {
+                        color: #FFC3C8;
+                        font-size: .1rem;
+                    }
+                    &:nth-child(3) {
+                        margin-top: .2rem;
+                        span {
+                            background: #FE283A;
+                            border-radius: .1rem;
+                            padding: .01rem .03rem;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nav1 {
+        width: 90%;
+        margin-left: 5%;
+        background: #fff;
+        p {
+            display: flex;
+            span {
+                flex: 1;
+                display: flex;
+                em {
+                    padding: .1rem 0;
+                    flex: 1;
+                    @extend %qjz;
+                    border-right: solid .01rem #ccc;
+                }
+            }
+        }
+    }
+    .nav1 {
+        width: 90%;
+        margin-left: 5%;
+        background: #fff;
+        margin-bottom: .2rem;
+        p {
+            display: flex;
+            span {
+                flex: 1;
+                display: flex;
+                em {
+                    padding: .1rem 0;
+                    flex: 1;
+                    @extend %qjz;
+                    border-right: solid .01rem #ccc;
+                }
+            }
+        }
+    }
 }
 
 footer {
     width: 100%;
-    height: .4rem;
+    height: .6rem;
+    display: flex;
+    dl {
+        flex: 1;
+        &:nth-child(1) {
+            dt {
+                i {
+                    color: red;
+                }
+            }
+        }
+        dt {
+            i {
+                @extend %qjz;
+                font-size: .3rem!important;
+            }
+        }
+        dd {
+            @extend %qjz;
+        }
+    }
 }
